@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: Bavest FIN-LLAMA
+type: software, dataset
+authors:
+  - given-names: William
+    family-names: Todt
+    email: william.todt@bavest.co
+  - given-names: Pedram
+    family-names: Babaei
+    email: pedram.babaei@bavest.co
+  - given-names: Ramtin
+    family-names: Babaei
+    email: ramtin.babaei@bavest.co
+identifiers:
+  - type: url
+    value: 'https://github.com/Bavest/fin-llama'
+repository-code: 'https://github.com/Bavest/fin-llama'
+url: 'https://www.bavest.co'
+repository: 'https://huggingface.co/bavest/fin-llama'
+license: GPL-3.0

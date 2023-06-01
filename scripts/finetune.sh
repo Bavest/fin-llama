@@ -1,0 +1,25 @@
+python3 qlora.py \
+    --model_name_or_path huggyllama/llama-30b \
+    --output_dir ./output \
+    --dataset fin-llama \
+    --do_train True \
+    --report_to wandb \
+    --do_eval False \
+    --do_mmlu_eval False \
+    --source_max_len 3072 \
+    --target_max_len 384 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 4 \
+    --logging_steps 10 \
+    --max_steps 3000 \
+    --save_strategy steps \
+    --learning_rate 0.0001 \
+    --data_seed 42 \
+    --save_steps 500 \
+    --save_total_limit 40 \
+    --evaluation_strategy steps \
+    --eval_dataset_size 1024 \
+    --max_eval_samples 1000 \
+    --eval_steps 1000 \
+    --optim paged_adamw_32bit
