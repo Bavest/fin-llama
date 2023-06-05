@@ -25,8 +25,3 @@ source venv/bin/activate
 
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
-
-pip3 install -q -U bitsandbytes
-pip3 install -q -U git+https://github.com/huggingface/transformers.git
-pip3 install -q -U git+https://github.com/huggingface/peft.git
-pip3 install -q -U git+https://github.com/huggingface/accelerate.git

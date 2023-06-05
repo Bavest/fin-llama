@@ -32,11 +32,7 @@ bash scripts/setup.sh
 ## Finetuning
 
 ```bash
-# use 4 bit finetuning
-bash script/finetune_4bit.sh
-
-# use 8 bit finetuning
-bash script/finetune_8bit.sh
+bash script/finetune.sh
 ```
 
 ## Usage
@@ -54,8 +50,9 @@ Quantization parameters are controlled from the `BitsandbytesConfig`
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
+pretrained_model_name_or_path = "bavest/fin-llama-33b-merge"
 model = AutoModelForCausalLM.from_pretrained(
-    model_name_or_path='bavest/fin-llama',
+    pretrained_model_name_or_path=pretrained_model_name_or_path,
     load_in_4bit=True,
     device_map='auto',
     torch_dtype=torch.bfloat16,
@@ -67,7 +64,7 @@ model = AutoModelForCausalLM.from_pretrained(
     ),
 )
 
-tokenizer = AutoTokenizer.from_pretrained(model_path)
+tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path)
 
 question = "What is the market cap of apple?"
 input = "" # context if needed
@@ -85,6 +82,7 @@ with torch.no_grad():
         do_sample=True,
         top_p=0.9,
         temperature=0.8,
+        max_length=128
     )
 
 generated_text = tokenizer.decode(
