@@ -4,7 +4,7 @@
 
 > Efficient Finetuning of Quantized LLMs for Finance
 
-[Adapter Weights](https://huggingface.co/bavest/fin-llama)
+[Adapter Weights](https://huggingface.co/bavest/fin-llama-33b-merged)
 |  [Dataset](https://huggingface.co/datasets/bavest/fin-llama-dataset)
 
 ## Installation
@@ -14,10 +14,6 @@ and make sure you have the latest version of the bitsandbytes library (0.39.0).
 
 ```bash
 pip3 install -r requirements.txt
-pip3 install -q -U bitsandbytes
-pip3 install -q -U git+https://github.com/huggingface/transformers.git
-pip3 install -q -U git+https://github.com/huggingface/peft.git
-pip3 install -q -U git+https://github.com/huggingface/accelerate.git
 ```
 
 ### Other dependencies
