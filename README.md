@@ -46,7 +46,7 @@ Quantization parameters are controlled from the `BitsandbytesConfig`
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
-pretrained_model_name_or_path = "bavest/fin-llama-33b-merge"
+pretrained_model_name_or_path = "bavest/fin-llama-33b-merged"
 model = AutoModelForCausalLM.from_pretrained(
     pretrained_model_name_or_path=pretrained_model_name_or_path,
     load_in_4bit=True,
